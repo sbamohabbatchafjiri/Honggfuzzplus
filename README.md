@@ -95,14 +95,50 @@ As you can use differet target for fuzzing, we represent a general representatio
     </code>
   </pre>
 </div>
-Now, you can test a slected function's binary using:
+To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form:
+
+For libexif:
 <div>
   <pre>
     <code class="language-bash">
-      $HOME/fuzzing_target/install/bin/slected_function -box -meta $HOME/fuzzing_target/target_samples/sample1.file_format
+$HOME/fuzzing_libexif/install/bin/exif
     </code>
   </pre>
 </div>
+For Xpdf:
+
+<div>
+  <pre>
+    <code class="language-bash">
+$HOME/fuzzing_xpdf/install/bin/pdfinfo -box -meta $HOME/fuzzing_xpdf/pdf_examples/helloworld.pdf
+    </code>
+  </pre>
+</div>
+For TCPdump:
+<div>
+  <pre>
+    <code class="language-bash">
+$HOME/fuzzing_tcpdump/install/sbin/tcpdump -h
+    </code>
+  </pre>
+</div>
+For libTIFFF:
+
+<div>
+  <pre>
+    <code class="language-bash">
+$HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w $HOME/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff
+For libxml2:
+
+<div>
+  <pre>
+    <code class="language-bash">
+./xmllint --memory ./test/wml.xml
+    </code>
+  </pre>
+</div>
+By executing these command lines, you can test and verify that each library is functioning correctly. 
+
 
 Here is an example from [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1]:
 
