@@ -105,7 +105,6 @@ For libxml2
     <code class="language-bash">
       cd $HOME
       mkdir Fuzzing_libxml2 && cd Fuzzing_libxml2
-      
     </code>
   </pre>
 </div>
