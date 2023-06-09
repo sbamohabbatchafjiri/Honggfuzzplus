@@ -52,7 +52,7 @@ This should display something similar to the following output.
 ### Download and build your target
 
 As you can use differet target for fuzzing, we represent a general representation of we you need to do. To access more targets and more details about sample targets, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website created by Antonio Morales [1].
- 
+####default 
 <div>
   <pre>
     <code class="language-bash">
@@ -61,7 +61,7 @@ As you can use differet target for fuzzing, we represent a general representatio
  </code>
   </pre>
 </div>
- 
+####for xpdf 
  <div>
   <pre>
     <code class="language-bash">
@@ -70,6 +70,7 @@ As you can use differet target for fuzzing, we represent a general representatio
   </code>
   </pre>
 </div>
+####for libTIFF
  <div>
   <pre>
     <code class="language-bash">
@@ -78,6 +79,8 @@ As you can use differet target for fuzzing, we represent a general representatio
   </code>
   </pre>
 </div>
+
+For libexif
   <div>
   <pre>
     <code class="language-bash">
@@ -86,6 +89,7 @@ As you can use differet target for fuzzing, we represent a general representatio
   </code>
   </pre>
 </div>
+For tecdump
   <div>
   <pre>
     <code class="language-bash">
@@ -94,6 +98,7 @@ As you can use differet target for fuzzing, we represent a general representatio
   </code>
   </pre>
 </div>
+For libxml2
   <div>
   <pre>
     <code class="language-bash">
