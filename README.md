@@ -19,7 +19,6 @@ Install the required dependencies by executing the following commands:
       sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/.* //'|sed 's/\..*//')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/.* //'|sed 's/\..*//')-dev
     </code>
   </pre>
-  <button class="copy-button">Copy</button>
 </div>
 
 Checkout and build AFL++
