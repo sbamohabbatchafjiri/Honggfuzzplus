@@ -39,7 +39,6 @@
  * Please refer to the original licenses for honggfuzz's mangle.c code and the AES reverse S-box for more details.
  */
 
- */
 
 #include "mangle.h"
 
