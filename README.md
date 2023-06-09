@@ -6,9 +6,9 @@
 
 ### AFL++ installation
 
-We will be utilizing the most recent version of the AFL++ fuzzer for this course.
+The most recent version of the AFL++ fuzzer for this experiment is utilized.
 
-Install the required dependencies by executing the following commands:
+Install the required dependencies by executing the following commands [1]:
 <div>
   <pre>
     <code class="language-bash">
@@ -21,7 +21,7 @@ Install the required dependencies by executing the following commands:
   </pre>
 </div>
 
-Checkout and build AFL++
+Checkout and build AFL++ [1]: 
 
 <div>
   <pre>
@@ -49,7 +49,7 @@ This should display something similar to the following output.
 
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
-For  more details about AFL++ installation and docker file installation please visit: https://github.com/AFLplusplus/AFLplusplus
+For  more details about AFL++ installation and docker file installation please visit: [AFL++](https://github.com/AFLplusplus/AFLplusplus)
 
 ### Download and build your target
 
@@ -260,7 +260,10 @@ You will see:
 
 
 ## Refrences
+
 [1] Antonio Morales. Fuzzing101. [Online]. Available: [Fuzzing101 GitHub Repository](https://github.com/antonio-morales/Fuzzing101/tree/main). Accessed: [09/06/2023].
+
+[2] Andrea Fioraldi, Dominik Maier, Heiko Eißfeldt, and Marc Heuse. “AFL++: Combining incremental steps of fuzzing research”. In 14th USENIX Workshop on Offensive Technologies (WOOT 20). USENIX Association, AFL++ [Online]. Available: [AFL++](https://github.com/AFLplusplus/AFLplusplus). Aug. 2020. Accessed: [09/06/2023].
 
 [2] [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) - Antonio Morales, "Fuzzing101" repository, Accessed [09/06/2023].
 
