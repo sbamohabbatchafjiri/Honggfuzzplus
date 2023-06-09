@@ -128,6 +128,10 @@ For libTIFFF:
   <pre>
     <code class="language-bash">
 $HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w $HOME/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff
+    </code>
+  </pre>
+</div>
+
 For libxml2:
 
 <div>
