@@ -49,7 +49,7 @@ This should display something similar to the following output.
 
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
-For  more details aout AFL++ instalation and installing AFL++ by docker please visit: https://github.com/AFLplusplus/AFLplusplus
+For  more details about AFL++ installation and docker file installation please visit: https://github.com/AFLplusplus/AFLplusplus
 
 ### Download and build your target
 
