@@ -101,7 +101,7 @@ Now, you can test a slected function's binary using:
   </pre>
 </div>
 
-Here is an example from To access the exercise materials, please visit the [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository:
+Here is an example from To access the exercise materials, please visit the [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1]:
 
 <div>
   <pre>
