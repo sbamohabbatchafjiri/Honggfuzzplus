@@ -90,7 +90,7 @@ For libexif
   </code>
   </pre>
 </div>
-For tecdump
+For TCPdump
   <div>
   <pre>
     <code class="language-bash">
