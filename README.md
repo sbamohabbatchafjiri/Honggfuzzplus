@@ -47,9 +47,7 @@ Assuming the previous steps were successful, you should now be able to run afl-f
 </div>
 This should display something similar to the following output.
 
-
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/5eea3389-0401-4c07-afc9-bb6a48811754)
-
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
 
 
