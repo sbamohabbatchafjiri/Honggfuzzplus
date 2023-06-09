@@ -58,15 +58,45 @@ As you can use differet target for fuzzing, we represent a general representatio
     <code class="language-bash">
       cd $HOME
       mkdir fuzzing_target && cd fuzzing_target/
-      
+ </code>
+  </pre>
+</div>
+ 
+ <div>
+  <pre>
+    <code class="language-bash">
       cd $HOME
       mkdir fuzzing_xpdf && cd fuzzing_xpdf/
+  </code>
+  </pre>
+</div>
+ <div>
+  <pre>
+    <code class="language-bash">
       cd $HOME
       mkdir fuzzing_tiff && cd fuzzing_tiff/
+  </code>
+  </pre>
+</div>
+  <div>
+  <pre>
+    <code class="language-bash">
       cd $HOME
       mkdir fuzzing_libexif && cd fuzzing_libexif/
+  </code>
+  </pre>
+</div>
+  <div>
+  <pre>
+    <code class="language-bash">
       cd $HOME
       mkdir fuzzing_tcpdump && cd fuzzing_tcpdump/
+  </code>
+  </pre>
+</div>
+  <div>
+  <pre>
+    <code class="language-bash">
       cd $HOME
       mkdir Fuzzing_libxml2 && cd Fuzzing_libxml2
       
