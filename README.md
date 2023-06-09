@@ -52,7 +52,8 @@ This should display something similar to the following output.
 ### Download and build your target
 
 As you can use differet target for fuzzing, we represent a general representation of we you need to do. To access more targets and more details about sample targets, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website created by Antonio Morales [1].
-####default 
+
+Default 
 <div>
   <pre>
     <code class="language-bash">
@@ -61,7 +62,7 @@ As you can use differet target for fuzzing, we represent a general representatio
  </code>
   </pre>
 </div>
-####for xpdf 
+For xpdf 
  <div>
   <pre>
     <code class="language-bash">
@@ -70,7 +71,7 @@ As you can use differet target for fuzzing, we represent a general representatio
   </code>
   </pre>
 </div>
-####for libTIFF
+For libTIFF
  <div>
   <pre>
     <code class="language-bash">
