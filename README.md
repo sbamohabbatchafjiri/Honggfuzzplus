@@ -62,6 +62,59 @@ This should display something similar to the following output.
 <div>
   <pre>
     <code class="language-bash">
+      wget https://dl.from_official_web_page.com/target.tar.gz
+      tar -xvzf target.tar.gz
+    </code>
+  </pre>
+</div>
+
+<div>
+  <pre>
+    <code class="language-bash">
+      cd target
+      sudo apt update && sudo apt install -y build-essential gcc
+      ./configure --prefix="$HOME/fuzzing_target/install/"
+      make
+      make install
+    </code>
+  </pre>
+</div>
+
+<div>
+  <pre>
+    <code class="language-bash">
+      cd $HOME/fuzzing_target
+      mkdir target_file_samples && cd target_file_examples
+      wget https://web_over_internet/sample1.file_format
+      wget https://web_over_internet/sample2.file_format
+      wget https://web_over_internet/sample3.file_format
+      wget https://web_over_internet/sample4.file_format
+    </code>
+  </pre>
+</div>
+Now, you can test a slected function's binary using:
+<div>
+  <pre>
+    <code class="language-bash">
+      $HOME/fuzzing_target/install/bin/slected_function -box -meta $HOME/fuzzing_target/target_samples/sample1.file_format
+    </code>
+  </pre>
+</div>
+
+Here is an example from :
+
+<div>
+  <pre>
+    <code class="language-bash">
+      cd $HOME
+      mkdir fuzzing_xpdf && cd fuzzing_xpdf/
+    </code>
+  </pre>
+</div>
+
+<div>
+  <pre>
+    <code class="language-bash">
       sudo apt install build-essential
     </code>
   </pre>
@@ -70,18 +123,8 @@ This should display something similar to the following output.
 <div>
   <pre>
     <code class="language-bash">
-      wget https://dl.from_official_web_page.com/software.tar.gz
-      tar -xvzf software.tar.gz
-    </code>
-  </pre>
-</div>
-
-Here is an example:
-<div>
-  <pre>
-    <code class="language-bash">
-    wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
-    tar -xvzf xpdf-3.02.tar.gz
+      wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
+      tar -xvzf xpdf-3.02.tar.gz
     </code>
   </pre>
 </div>
@@ -109,7 +152,7 @@ Here is an example:
     </code>
   </pre>
 </div>
-Now, you can test the pdfinfo binary using:
+
 <div>
   <pre>
     <code class="language-bash">
