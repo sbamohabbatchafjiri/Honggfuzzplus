@@ -1,9 +1,6 @@
+
 /*
- * SPHongg
- * Modified version of honggfuzz's mangle.c code with Substitution-Permutation using AES reverse S-box.
  *
- * Original mangle.c code:
- * -----------------------------------------
  * honggfuzz - run->dynfile->datafer mangling routines
  * -----------------------------------------
  *
@@ -24,21 +21,7 @@
  * implied. See the License for the specific language governing
  * permissions and limitations under the License.
  *
- * AES reverse S-box:
- * (Describe the original source and copyright information for the AES reverse S-box you used)
- *
- * Modifications:
- * - Implemented Substitution-Permutation using AES reverse S-box.
- * - (Describe any other modifications or additions you made)
- *
- * Disclaimer:
- * This modified code is provided for informational purposes only. The modifications made to the original
- * code are the responsibility of the person or organization that made them. The original authors and
- * copyright holders of the honggfuzz's mangle.c code and the AES reverse S-box have no affiliation
- * with this modified version and bear no responsibility for its use or any potential issues that may arise.
- * Please refer to the original licenses for honggfuzz's mangle.c code and the AES reverse S-box for more details.
  */
-
 
 #include "mangle.h"
 
@@ -56,6 +39,7 @@
 #include "libhfcommon/common.h"
 #include "libhfcommon/log.h"
 #include "libhfcommon/util.h"
+
 uint8_t sbox[256] = {
 
     0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0xa5, 0x38, 0xbf, 0x40, 0xa3, 0x9e, 0x81, 0xf3, 0xd7, 0xfb, 0x7c, 0xe3, 0x39,
@@ -74,6 +58,8 @@ uint8_t sbox[256] = {
     0x26, 0xe1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0c, 0x7d
 
 };
+
+
 static inline size_t mangle_LenLeft(run_t* run, size_t off) {
     if (off >= run->dynfile->size) {
         LOG_F("Offset is too large: off:%zu >= len:%zu", off, run->dynfile->size);
@@ -210,12 +196,12 @@ static void mangle_MemSwap(run_t* run, bool printable HF_ATTR_UNUSED) {
          * part - there's no good solution to that, and it can be left somewhat scrambled,
          * while still preserving the entropy
          */
-        uint8_t tmp0                       = run->dynfile->data[off2 + i];
-        const tmp1 = (sbox[tmp0] << 5) | (sbox[tmp0] >> (3));
-        run->dynfile->data[off2 + i]             = run->dynfile->data[off1 + i];
-        run->dynfile->data[off1 + i]             = tmp1;
-        uint8_t tmp00                       = run->dynfile->data[off2 + (len - 1) - i];
-        const tmp2 = (sbox[tmp00] << 3) | (sbox[tmp00] >> (5));
+        uint8_t tmp_left = run->dynfile->data[off2 + i];
+        uint8_t tmp_right = run->dynfile->data[off2 + (len - 1) - i];
+        const tmp1 = (sbox[tmp_left] << 5) | (sbox[tmp_left] >> (3))^tmp_right;
+        run->dynfile->data[off2 + i] = run->dynfile->data[off1 + i];
+        run->dynfile->data[off1 + i] = tmp1;
+        const tmp2 = tmp_left;
         run->dynfile->data[off2 + (len - 1) - i] = run->dynfile->data[off1 + (len - 1) - i];
         run->dynfile->data[off1 + (len - 1) - i] = tmp2;
     }
