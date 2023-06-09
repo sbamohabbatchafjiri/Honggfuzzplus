@@ -75,6 +75,7 @@ This should display something similar to the following output.
     </code>
   </pre>
 </div>
+
 Here is an example:
 <div>
   <pre>
@@ -84,8 +85,6 @@ Here is an example:
     </code>
   </pre>
 </div>
-
-
 
 <div>
   <pre>
