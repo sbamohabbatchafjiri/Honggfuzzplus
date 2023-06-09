@@ -50,6 +50,9 @@ This should display something similar to the following output.
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
 ### Download and build your target
+
+As you can use differet target for fuzzing, we represent a general representation of we you need to do. To access more targets and more details about sample targets, please visit the Fuzzing101 website [https://github.com/antonio-morales/Fuzzing101/tree/main](https://github.com/antonio-morales/Fuzzing101/tree/main) created by Antonio Morales.
+ 
 <div>
   <pre>
     <code class="language-bash">
