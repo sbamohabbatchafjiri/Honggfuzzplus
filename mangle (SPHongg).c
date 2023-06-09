@@ -1,6 +1,9 @@
 /*
- * SPHongg
- * Modified version of honggfuzz's mangle.c code with Substitution-Permutation using AES reverse S-box.
+ * Modified version of HonggFuzz's mangle.c code with Substitution-Permutation structure in mangle_MemSwap.
+ * Uses AES reverse S-box for substitution on both input bytes, tmp_left and tmp_right. Performs 3-bit
+ * left rotations on the output of the left byte and 5-bit left rotations on the output of the right byte,
+ * resulting in a light permutation. The left output's byte (tmp1) and the output's right byte (tmp2) are
+ * generated from this permutation.
  *
  * Original mangle.c code:
  * -----------------------------------------
@@ -28,16 +31,21 @@
  * (Describe the original source and copyright information for the AES reverse S-box you used)
  *
  * Modifications:
- * - Implemented Substitution-Permutation using AES reverse S-box.
- * - (Describe any other modifications or additions you made)
+ * - Implemented Substitution-Permutation structure in mangle_MemSwap.
+ * - Utilized AES reverse S-box for substitution on both input bytes, tmp_left and tmp_right.
+ * - Performed 3-bit left rotations on the output of the left byte and 5-bit left rotations on the
+ *   output of the right byte for light permutation.
+ * - Generated the left input's byte (tmp1) and the output's right byte (tmp2) from the permutation.
+ * 
  *
  * Disclaimer:
  * This modified code is provided for informational purposes only. The modifications made to the original
  * code are the responsibility of the person or organization that made them. The original authors and
- * copyright holders of the honggfuzz's mangle.c code and the AES reverse S-box have no affiliation
+ * copyright holders of HonggFuzz's mangle.c code and the AES reverse S-box have no affiliation
  * with this modified version and bear no responsibility for its use or any potential issues that may arise.
- * Please refer to the original licenses for honggfuzz's mangle.c code and the AES reverse S-box for more details.
+ * Please refer to the original licenses for HonggFuzz's mangle.c code and the AES reverse S-box for more details.
  */
+
 
 
 #include "mangle.h"
