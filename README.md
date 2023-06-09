@@ -75,7 +75,10 @@ As you can use differet target for fuzzing, we represent a general representatio
   <pre>
     <code class="language-bash">
       cd target
-      sudo apt update && sudo apt install -y build-essential gcc
+      
+      CC=afl-clang-fast or afl-clang-lto (if it is required at this stage)
+      CXX=afl-clang-fast++ or afl-clang-lto++ (if it is required at this stage)
+      
       ./configure --prefix="$HOME/fuzzing_target/install/"
       make
       make install
