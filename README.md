@@ -80,8 +80,8 @@ Here is an example:
 <div>
   <pre>
     <code class="language-bash">
- wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
- tar -xvzf xpdf-3.02.tar.gz
+    wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
+    tar -xvzf xpdf-3.02.tar.gz
     </code>
   </pre>
 </div>
