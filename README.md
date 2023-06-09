@@ -51,7 +51,12 @@ This should display something similar to the following output.
 
 ### Download and build your target
 
-As you can use differet target for fuzzing, we represent a general representation of we you need to do. To access more targets and more details about sample targets, please visit the Fuzzing101 website [https://github.com/antonio-morales/Fuzzing101/tree/main](https://github.com/antonio-morales/Fuzzing101/tree/main) created by Antonio Morales.
+As you can use differet target for fuzzing, we represent a general representation of we you need to do. To access more targets and more details about sample targets, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website created by Antonio Morales.
+
+
+
+
+created by Antonio Morales.
  
 <div>
   <pre>
@@ -170,7 +175,7 @@ You will see:
 
 
 ## Refrences
-
-[1] [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) - Antonio Morales, "Fuzzing101" repository, Accessed [09/06/2023].
+[1] Antonio Morales. Fuzzing101. [Online]. Available: [Fuzzing101 GitHub Repository](https://github.com/antonio-morales/Fuzzing101/tree/main). Accessed: [Date Accessed].
+[2] [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) - Antonio Morales, "Fuzzing101" repository, Accessed [09/06/2023].
 
 ## Contact
