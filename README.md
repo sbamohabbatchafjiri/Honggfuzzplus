@@ -49,6 +49,75 @@ This should display something similar to the following output.
 
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
+### Download and build your target
+<div>
+  <pre>
+    <code class="language-bash">
+      cd $HOME
+      mkdir fuzzing_target && cd fuzzing_target/
+    </code>
+  </pre>
+</div>
+
+<div>
+  <pre>
+    <code class="language-bash">
+      sudo apt install build-essential
+    </code>
+  </pre>
+</div>
+
+<div>
+  <pre>
+    <code class="language-bash">
+      wget https://dl.from_official_web_page.com/software.tar.gz
+      tar -xvzf software.tar.gz
+    </code>
+  </pre>
+</div>
+Here is an example:
+<div>
+  <pre>
+    <code class="language-bash">
+ wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
+ tar -xvzf xpdf-3.02.tar.gz
+    </code>
+  </pre>
+</div>
+
+
+
+<div>
+  <pre>
+    <code class="language-bash">
+      cd xpdf-3.02
+      sudo apt update && sudo apt install -y build-essential gcc
+      ./configure --prefix="$HOME/fuzzing_xpdf/install/"
+      make
+      make install
+    </code>
+  </pre>
+</div>
+
+<div>
+  <pre>
+    <code class="language-bash">
+      cd $HOME/fuzzing_xpdf
+      mkdir pdf_examples && cd pdf_examples
+      wget https://github.com/mozilla/pdf.js-sample-files/raw/master/helloworld.pdf
+      wget http://www.africau.edu/images/default/sample.pdf
+      wget https://www.melbpc.org.au/wp-content/uploads/2017/10/small-example-pdf-file.pdf
+    </code>
+  </pre>
+</div>
+Now, you can test the pdfinfo binary using:
+<div>
+  <pre>
+    <code class="language-bash">
+      $HOME/fuzzing_xpdf/install/bin/pdfinfo -box -meta $HOME/fuzzing_xpdf/pdf_examples/helloworld.pdf
+    </code>
+  </pre>
+</div>
 
 
 
