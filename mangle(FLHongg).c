@@ -1,9 +1,9 @@
 /*
  * Modified version of HonggFuzz's mangle.c code with Feistel Network structure in mangle_MemSwap.
- * Uses AES reverse S-box for substitution, followed by buffer swapping. Implements a Feistel Network
- * by performing 5-bit left rotations on the left input byte (tmp_left) and performing an exclusive
- * OR operation between this output and the right input byte (tmp_right) to generate the output's
- * right byte (tmp2). The output's left byte is derived from tmp_right and is referred to as tmp1.
+ * Implements the AES reverse S-box for substitution and performs a 5-bit left rotations on the 
+ * left input byte (tmp_left) and performing an exclusive OR operation between this output and
+ * the right input byte (tmp_right) to generate the output's right byte (tmp2). The output's 
+ * left byte is derived from tmp_right and is referred to as tmp1.
  *
  * Original mangle.c code:
  * -----------------------------------------
@@ -36,7 +36,7 @@
  * - Performed 5-bit left rotations on the left input byte (tmp_left).
  * - Performed exclusive OR operation between tmp_left and tmp_right to generate tmp2.
  * - Derived the output's left byte (tmp1) from tmp_right.
- * - (Describe any other modifications or additions you made)
+ * 
  *
  * Disclaimer:
  * This modified code is provided for informational purposes only. The modifications made to the original
