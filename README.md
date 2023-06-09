@@ -22,11 +22,46 @@ Install the required dependencies by executing the following commands:
   <button class="copy-button">Copy</button>
 </div>
 
+Checkout and build AFL++
+
+<div>
+  <pre>
+    <code class="language-bash">
+      <!-- Paste your code here -->
+      cd $HOME
+      git clone https://github.com/AFLplusplus/AFLplusplus && cd AFLplusplus
+      export LLVM_CONFIG="llvm-config-11"
+      make distrib
+      sudo make install
+    </code>
+  </pre>
+  <button class="copy-button">Copy</button>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.copy-button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const codeBlock = button.previousElementSibling.querySelector('code');
+      const code = codeBlock.innerText;
+      navigator.clipboard.writeText(code)
+        .then(() => {
+          button.innerText = 'Copied!';
+          setTimeout(() => {
+            button.innerText = 'Copy';
+          }, 2000);
+        })
+        .catch(err => {
+          console.error('Failed to copy:', err);
+        });
+    });
+  });
+</script>
 
 
 
 Assuming the previous steps were successful, you should now be able to run afl-fuzz. Simply type:
-Copy code
+
 afl-fuzz
 This should display something similar to the following output.
 
