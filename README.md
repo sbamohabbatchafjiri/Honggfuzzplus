@@ -34,34 +34,17 @@ Checkout and build AFL++
       sudo make install
     </code>
   </pre>
-  <button class="copy-button">Copy</button>
 </div>
-
-<script>
-  const buttons = document.querySelectorAll('.copy-button');
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const codeBlock = button.previousElementSibling.querySelector('code');
-      const code = codeBlock.innerText;
-      navigator.clipboard.writeText(code)
-        .then(() => {
-          button.innerText = 'Copied!';
-          setTimeout(() => {
-            button.innerText = 'Copy';
-          }, 2000);
-        })
-        .catch(err => {
-          console.error('Failed to copy:', err);
-        });
-    });
-  });
-</script>
-
 
 
 Assuming the previous steps were successful, you should now be able to run afl-fuzz. Simply type:
-
-afl-fuzz
+<div>
+  <pre>
+    <code class="language-bash">
+           afl-fuzz
+    </code>
+  </pre>
+</div>
 This should display something similar to the following output.
 
 
