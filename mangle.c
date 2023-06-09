@@ -1,5 +1,9 @@
 /*
+ * SPHongg
+ * Modified version of honggfuzz's mangle.c code with Substitution-Permutation using AES reverse S-box.
  *
+ * Original mangle.c code:
+ * -----------------------------------------
  * honggfuzz - run->dynfile->datafer mangling routines
  * -----------------------------------------
  *
@@ -20,6 +24,21 @@
  * implied. See the License for the specific language governing
  * permissions and limitations under the License.
  *
+ * AES reverse S-box:
+ * (Describe the original source and copyright information for the AES reverse S-box you used)
+ *
+ * Modifications:
+ * - Implemented Substitution-Permutation using AES reverse S-box.
+ * - (Describe any other modifications or additions you made)
+ *
+ * Disclaimer:
+ * This modified code is provided for informational purposes only. The modifications made to the original
+ * code are the responsibility of the person or organization that made them. The original authors and
+ * copyright holders of the honggfuzz's mangle.c code and the AES reverse S-box have no affiliation
+ * with this modified version and bear no responsibility for its use or any potential issues that may arise.
+ * Please refer to the original licenses for honggfuzz's mangle.c code and the AES reverse S-box for more details.
+ */
+
  */
 
 #include "mangle.h"
