@@ -49,6 +49,8 @@ This should display something similar to the following output.
 
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
+For  more details aout AFL++ instalation and installing AFL++ by docker please visit: https://github.com/AFLplusplus/AFLplusplus
+
 ### Download and build your target
 
 As you can use differet target for fuzzing, we represent a general representation of we you need to do. To access more targets and more details about sample targets, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website created by Antonio Morales [1].
