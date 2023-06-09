@@ -41,12 +41,13 @@ Assuming the previous steps were successful, you should now be able to run afl-f
 <div>
   <pre>
     <code class="language-bash">
-           afl-fuzz
+    afl-fuzz
     </code>
   </pre>
 </div>
 This should display something similar to the following output.
 
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/5eea3389-0401-4c07-afc9-bb6a48811754)
 
 
 
