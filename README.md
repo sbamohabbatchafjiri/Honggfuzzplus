@@ -96,7 +96,6 @@ installing GNUplot to generate some pretty graphs for any active fuzzing task us
 <div>
   <pre>
     <code class="language-bash">
-cd --
 sudo apt-get install gnuplot
     </code>
   </pre>
