@@ -64,6 +64,7 @@ Default
  </code>
   </pre>
 </div>
+
 For xpdf 
  <div>
   <pre>
@@ -73,6 +74,7 @@ For xpdf
   </code>
   </pre>
 </div>
+
 For libTIFF
  <div>
   <pre>
@@ -92,6 +94,7 @@ For libexif
   </code>
   </pre>
 </div>
+
 For TCPdump
   <div>
   <pre>
@@ -101,6 +104,7 @@ For TCPdump
   </code>
   </pre>
 </div>
+
 For libxml2
   <div>
   <pre>
@@ -111,6 +115,8 @@ For libxml2
   </pre>
 </div>
 
+
+Download the target:
 <div>
   <pre>
     <code class="language-bash">
@@ -119,7 +125,7 @@ For libxml2
     </code>
   </pre>
 </div>
-
+Build The target:
 <div>
   <pre>
     <code class="language-bash">
@@ -132,29 +138,11 @@ For libxml2
     </code>
   </pre>
 </div>
+test the build
 
-<div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME/fuzzing_target
-      mkdir target_file_samples && cd target_file_examples
-      wget https://web_over_internet/sample1.file_format
-      wget https://web_over_internet/sample2.file_format
-      wget https://web_over_internet/sample3.file_format
-      wget https://web_over_internet/sample4.file_format
-    </code>
-  </pre>
-</div>
 To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form:
 
-For libexif:
-<div>
-  <pre>
-    <code class="language-bash">
-$HOME/fuzzing_libexif/install/bin/exif
-    </code>
-  </pre>
-</div>
+
 For Xpdf:
 
 <div>
@@ -164,20 +152,31 @@ $HOME/fuzzing_xpdf/install/bin/pdfinfo -box -meta $HOME/fuzzing_xpdf/pdf_example
     </code>
   </pre>
 </div>
-For TCPdump:
+
+For libexif:
 <div>
   <pre>
     <code class="language-bash">
-$HOME/fuzzing_tcpdump/install/sbin/tcpdump -h
+$HOME/fuzzing_libexif/install/bin/exif
     </code>
   </pre>
 </div>
+
 For libTIFFF:
 
 <div>
   <pre>
     <code class="language-bash">
 $HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w $HOME/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff
+    </code>
+  </pre>
+</div>
+
+For TCPdump:
+<div>
+  <pre>
+    <code class="language-bash">
+$HOME/fuzzing_tcpdump/install/sbin/tcpdump -h
     </code>
   </pre>
 </div>
@@ -191,6 +190,7 @@ For libxml2:
     </code>
   </pre>
 </div>
+
 By executing these command lines, you can test and verify that each library is functioning correctly. 
 
 
