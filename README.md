@@ -37,7 +37,7 @@ Checkout and build AFL++ [1]:
 </div>
 
 
-Assuming the previous steps were successful, you should now be able to run afl-fuzz. Simply type:
+Assuming the previous steps were successful, you should now be able to run afl-fuzz. Simply type [1]:
 <div>
   <pre>
     <code class="language-bash">
