@@ -2,7 +2,37 @@
 ## Getting started
 
 
-## Building and installing HonggFuzz+
+## Building and running both strucutres of HonggFuzz+ i.e. SPHongg and FLHongg as the mutator of the AFL++ fuzzing process
+### Presteps
+The series of commands below are used to clone the Ninja repository from GitHub, build the Ninja executable, and install it on your system. 
+<div>
+  <pre>
+    <code class="language-bash">
+git clone https://github.com/ninja-build/ninja.git && cd ninja
+./configure.py --bootstrap
+    </code>
+  </pre>
+</div>
+
+Then, you can copy the compiled Ninja executable to the /usr/bin/ directory on your system. The sudo command is used to run the copy operation with administrative privileges, as copying to bin directory typically requires elevated permissions.
+<div>
+  <pre>
+    <code class="language-bash">
+sudo cp ninja /usr/bin/
+    </code>
+  </pre>
+</div>
+
+Finally, you can check the version of the installed Ninja executable by running ninja --version. This will display the version information on the console.
+
+<div>
+  <pre>
+    <code class="language-bash">
+ninja --version
+    </code>
+  </pre>
+</div>
+
 
 ### AFL++ installation
 
