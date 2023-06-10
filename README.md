@@ -4,6 +4,17 @@
 
 ## Building and running both strucutres of HonggFuzz+ i.e. SPHongg and FLHongg as the mutator of the AFL++ fuzzing process
 ### Presteps
+
+You may need to install neccessary updates and tools at the begining:
+
+<div>
+  <pre>
+    <code class="language-bash">
+sudo apt-get update
+sudo apt install build-essential
+    </code>
+  </pre>
+</div>
 The series of commands below are used to clone the Ninja repository from GitHub, build the Ninja executable, and install it on your system. 
 <div>
   <pre>
@@ -80,6 +91,7 @@ This should display something similar to the following output.
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
 
 For  more details about AFL++ installation and docker file installation please visit: [AFL++](https://github.com/AFLplusplus/AFLplusplus)
+### 
 
 ### Download and build your target
 
