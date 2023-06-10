@@ -65,57 +65,6 @@ Default
   </pre>
 </div>
 
-For xpdf 
- <div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME
-      mkdir fuzzing_xpdf && cd fuzzing_xpdf/
-  </code>
-  </pre>
-</div>
-
-For libTIFF
- <div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME
-      mkdir fuzzing_tiff && cd fuzzing_tiff/
-  </code>
-  </pre>
-</div>
-
-For libexif
-  <div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME
-      mkdir fuzzing_libexif && cd fuzzing_libexif/
-  </code>
-  </pre>
-</div>
-
-For TCPdump
-  <div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME
-      mkdir fuzzing_tcpdump && cd fuzzing_tcpdump/
-  </code>
-  </pre>
-</div>
-
-For libxml2
-  <div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME
-      mkdir Fuzzing_libxml2 && cd Fuzzing_libxml2
-    </code>
-  </pre>
-</div>
-
-
 Download the target:
 <div>
   <pre>
@@ -125,6 +74,7 @@ Download the target:
     </code>
   </pre>
 </div>
+
 Build The target:
 <div>
   <pre>
@@ -138,7 +88,10 @@ Build The target:
     </code>
   </pre>
 </div>
-test the build
+
+To see more details about building each target, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website.
+
+Test the build
 
 To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form:
 
