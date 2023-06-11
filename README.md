@@ -217,7 +217,8 @@ When you are using ALF++ without custom mutator and with -D, it will be like thi
 
 When you are using ALF++ with custom mutator and without -D, it will be like this:
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/3da9e939-7fb4-4da4-a591-eac208c8f356)
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/c4987d00-a196-417f-8024-a9051693d152)
+
 
 while
 
