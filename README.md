@@ -147,7 +147,9 @@ make
 
 This should display something similar to the following output.
 
+
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/6e17e08a-9888-4f77-a1b6-bc29ce76a844)
+
 
 You can do similar process for libfuzzer as depicted in the following output:
 
