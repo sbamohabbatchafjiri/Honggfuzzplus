@@ -175,7 +175,7 @@ For libfuzzer:
 export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/libfuzzer/libfuzzer-mutator.so"
 ```
 
-If you want to combine AFL mutation with custom mutation, you can use the following configuration:
+If you want to combine AFL mutation with custom mutation, you may use the following configuration.
 
 For AFL++ (American Fuzzy Lop Plus Plus) using a custom mutator library:
 ```
