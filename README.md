@@ -202,7 +202,7 @@ afl-fuzz -i $HOME/fuzzing_target/target_examples/ -o $HOME/fuzzing_xpdf/out/ -s 
 ```
 Here are different senarios:
 
-When you are using ALF++ without custom mutator and without -D, it will be like this:
+When you are using AFL++ without custom mutator and without -D, it will be like this:
 
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/518535bb-177b-43cd-859b-2d65ac955d87)
 
