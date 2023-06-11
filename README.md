@@ -94,7 +94,7 @@ For  more details about AFL++ installation and docker file installation please v
 ### GNUplot
 Installing GNUplot to generate some pretty graphs for any active fuzzing task using afl-plot. 
 
-Create the output directory:
+**Create the output directory:**
 <div>
   <pre>
     <code class="language-bash">
@@ -103,7 +103,8 @@ mkdir /home/kali/graph_output_dir
   </pre>
 </div>
 <div>
-Install gnuplot:
+
+ Install gnuplot:
   <pre>
     <code class="language-bash">
 sudo apt-get install gnuplot
