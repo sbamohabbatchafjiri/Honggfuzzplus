@@ -133,7 +133,25 @@ By executing these command lines, you can test and verify that each library is f
 
 **Creating .so file**
 
-The ".so" stands for "shared object." Shared libraries contain reusable code and data that can be dynamically linked by programs at runtime. They provide a way to share code among multiple executable files, reducing duplication and improving efficiency.
+The ".so" stands for "shared object." Shared libraries contain reusable code and data that can be dynamically linked by programs at runtime. They provide a way to share code among multiple executable files, reducing duplication and improving efficiency. To create .so file you may run commandlines as follows:
+
+```
+cd AFLplusplus/custom_mutators/honggfuzz/
+ls
+```
+Then, if there is .so file inside the honggfuzz directory, remove it and make it with current files.
+
+```
+make
+```
+
+This should display something similar to the following output.
+
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/6e17e08a-9888-4f77-a1b6-bc29ce76a844)
+
+To create a shared object file (.so) from the provided source code and files, compile the code using a suitable compiler, such as GCC, and link it with the required libraries, following the instructions specified in the provided Makefile. This process will produce a dynamic library (.so) that encapsulates the functionality defined in the source code, allowing it to be dynamically linked and used by other programs.
+
+
 
 If you want to exclusively use a custom mutator, you can specify the path to the respective shared object file as follows:
 
