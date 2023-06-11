@@ -66,6 +66,7 @@ This should display something similar to the following output.
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e" alt="Image 1" width="700">
 </p>
 For  more details about AFL++ installation and docker file installation please visit: [AFL++](https://github.com/AFLplusplus/AFLplusplus)
+
 ### GNUplot
 Installing GNUplot to generate some pretty graphs for any active fuzzing task using afl-plot. 
 
