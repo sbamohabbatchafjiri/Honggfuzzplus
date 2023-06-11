@@ -62,8 +62,9 @@ afl-fuzz
 ```
 This should display something similar to the following output.
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e)
-
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/7b2d92a4-dae0-4af0-9185-78bce6ae414e" alt="Image 1" width="700">
+</p>
 For  more details about AFL++ installation and docker file installation please visit: [AFL++](https://github.com/AFLplusplus/AFLplusplus)
 ### GNUplot
 Installing GNUplot to generate some pretty graphs for any active fuzzing task using afl-plot. 
@@ -148,13 +149,15 @@ make
 This should display something similar to the following output.
 
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/6e17e08a-9888-4f77-a1b6-bc29ce76a844)
-
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/6e17e08a-9888-4f77-a1b6-bc29ce76a844" alt="Image 2" width="700">
+</p>
 
 You can do similar process for libfuzzer as depicted in the following output:
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/9c962f03-6e0a-4931-9002-a0b07bf9a52f)
-
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/9c962f03-6e0a-4931-9002-a0b07bf9a52f" alt="Image 3" width="700">
+</p>
 
 To create a shared object file (.so) from the provided source code and files, compile the code using a suitable compiler, such as GCC, and link it with the required libraries, following the instructions specified in the provided Makefile. This process will produce a dynamic library (.so) that encapsulates the functionality defined in the source code, allowing it to be dynamically linked and used by other programs.
 
@@ -207,20 +210,22 @@ Here are different senarios:
 
 When you are using AFL++ without custom mutator and without -D, it will be like this:
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/a9d2bb80-8be9-43d7-be12-354a6476d130)
-
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/a9d2bb80-8be9-43d7-be12-354a6476d130" alt="Image 4" width="700">
+</p>
 
 When you are using ALF++ without custom mutator and with -D, it will be like this:
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/cbe9adc3-0cf0-450f-917b-a572c466c774)
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/cbe9adc3-0cf0-450f-917b-a572c466c774" alt="Image 5" width="700">
+</p>
+
 
 
 When you are using ALF++ with custom mutator and without -D, it will be like this:
 
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/c4987d00-a196-417f-8024-a9051693d152)
-
 <p align="center">
-  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/c4987d00-a196-417f-8024-a9051693d152" alt="Image 1" width="300">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/c4987d00-a196-417f-8024-a9051693d152" alt="Image 6" width="700">
 </p>
 
 
