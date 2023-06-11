@@ -162,6 +162,7 @@ You can do similar process for libfuzzer as depicted in the following output:
 To create a shared object file (.so) from the provided source code and files, compile the code using a suitable compiler, such as GCC, and link it with the required libraries, following the instructions specified in the provided Makefile. This process will produce a dynamic library (.so) that encapsulates the functionality defined in the source code, allowing it to be dynamically linked and used by other programs.
 
 
+**Employing and unemploying the AFL++ mutation and custom mutator**
 
 If you want to exclusively use a custom mutator, you can specify the path to the respective shared object file as follows.
 
@@ -229,7 +230,45 @@ When you are using ALF++ with custom mutator and without -D, it will be like thi
 </p>
 
 
-while
+**Employing and unemploying a patched custom mutator**
+
+To employ a patched custom mutator in AFL++, follow these steps:
+
+1. Download either the "mangle(SPHongg).c" or "mangle(FLHongg).c" file to your desired directory.
+
+
+2. Delete the existing "mangle.c" and ".so" files in that directory.
+
+3. Move the downloaded file ("mangle(SPHongg).c" or "mangle(FLHongg).c") to the same directory.
+
+4. Compile the new custom mutator file to create a new shared object (.so) file. Use an appropriate compiler, such as GCC, and ensure the necessary dependencies are met. The exact compilation command will depend on the specific code and any required libraries. For example, you can use the following command:
+
+```shell
+gcc -shared -o honggfuzz-mutator.so mangle(SPHongg).c
+```
+
+Replace "mangle(SPHongg).c" with the actual file name.
+
+5. After successfully creating the new ".so" file, set the environment variable "AFL_CUSTOM_MUTATOR_ONLY" to the path of the custom mutator shared object. Use the following command:
+
+```shell
+export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so"
+```
+
+Replace "/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so" with the actual path to the newly created shared object file.
+
+6. Navigate to the directory of your target program.
+
+7. Run AFL using the appropriate command-line options and the path to the target program. For example:
+
+```shell
+afl-fuzz -i input_dir -o output_dir -M master -- ./target_program @@
+```
+
+Replace "input_dir" with the directory containing the input files, "output_dir" with the desired output directory, "master" with the chosen instance name, and "target_program" with the name or path to your target program.
+
+By following these steps, you will replace the existing "mangle.c" and ".so" files with the patched custom mutator file and create a new shared object. Then, you can employ the custom mutator by setting the "AFL_CUSTOM_MUTATOR_ONLY" environment variable before running AFL with your target program.
+
 
 
 
