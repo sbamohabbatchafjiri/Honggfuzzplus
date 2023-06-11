@@ -158,9 +158,9 @@ To create a shared object file (.so) from the provided source code and files, co
 
 If you want to exclusively use a custom mutator, you can specify the path to the respective shared object file as follows:
 
-For AFL++ (American Fuzzy Lop Plus Plus) using the example code:
+For AFL++ (American Fuzzy Lop Plus Plus) using the AFLPLUSPLUS-custom-mutator code:
 ```
-export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/example.so"
+export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/AFLPLUSPLUS-custom-mutator.so"
 ```
 
 For Honggfuzz:
