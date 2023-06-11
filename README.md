@@ -294,6 +294,7 @@ For more details about paralel fuzzing please see [Paralel Fuzzing](https://gith
 [1] Antonio Morales. Fuzzing101. [Online]. Available: [Fuzzing101 GitHub Repository](https://github.com/antonio-morales/Fuzzing101/tree/main). Accessed: [09/06/2023].
 
 [2] Andrea Fioraldi, Dominik Maier, Heiko Eißfeldt, and Marc Heuse. “AFL++: Combining incremental steps of fuzzing research”. In 14th USENIX Workshop on Offensive Technologies (WOOT 20). USENIX Association, AFL++ [Online]. Available: [AFL++](https://github.com/AFLplusplus/AFLplusplus). Aug. 2020. Accessed: [09/06/2023].
+
 [3] [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) - Stribika, "Tips for parallel fuzzing" repository, Accessed [09/06/2023].
 
 
