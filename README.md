@@ -167,53 +167,14 @@ To see more details about building each target, please visit the [Fuzzing101](ht
 
 Test the build
 
-To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form:
+To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form. For eample libexif is as follows:
 
-
-For Xpdf:
-
-<div>
-  <pre>
-    <code class="language-bash">
-$HOME/fuzzing_xpdf/install/bin/pdfinfo -box -meta $HOME/fuzzing_xpdf/pdf_examples/helloworld.pdf
-    </code>
-  </pre>
-</div>
 
 For libexif:
 <div>
   <pre>
     <code class="language-bash">
 $HOME/fuzzing_libexif/install/bin/exif
-    </code>
-  </pre>
-</div>
-
-For libTIFFF:
-
-<div>
-  <pre>
-    <code class="language-bash">
-$HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w $HOME/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff
-    </code>
-  </pre>
-</div>
-
-For TCPdump:
-<div>
-  <pre>
-    <code class="language-bash">
-$HOME/fuzzing_tcpdump/install/sbin/tcpdump -h
-    </code>
-  </pre>
-</div>
-
-For libxml2:
-
-<div>
-  <pre>
-    <code class="language-bash">
-./xmllint --memory ./test/wml.xml
     </code>
   </pre>
 </div>
