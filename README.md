@@ -280,7 +280,7 @@ and then, start up secondary (-S) instances like this:
 $ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer02 [...other stuff...]
 $ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer03 [...other stuff...]
 
-For more details about paralel fuzzing please see [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt).
+For more details about paralel fuzzing please see [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) [4].
 
 
 
