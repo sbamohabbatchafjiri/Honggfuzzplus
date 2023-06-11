@@ -167,8 +167,6 @@ Test the build
 
 To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form. For eample libexif is as follows:
 
-
-For libexif:
 <div>
   <pre>
     <code class="language-bash">
