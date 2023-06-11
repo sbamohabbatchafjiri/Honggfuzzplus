@@ -137,7 +137,7 @@ As you can use differet target for fuzzing, we represent a general representatio
   </pre>
 </div>
 
-Download the target:
+**Download the target**:
 <div>
   <pre>
     <code class="language-bash">
@@ -163,7 +163,7 @@ Build The target:
 
 To see more details about building each target, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website.
 
-Test the build
+**Test the build**
 
 To ensure everything is working properly, you can test each library by running the respective command lines provided below. Although they may have slight variations, they follow a similar form. For eample libexif is as follows:
 
