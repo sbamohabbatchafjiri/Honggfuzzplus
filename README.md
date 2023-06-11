@@ -158,7 +158,7 @@ To create a shared object file (.so) from the provided source code and files, co
 
 
 
-If you want to exclusively use a custom mutator, you can specify the path to the respective shared object file as follows:
+If you want to exclusively use a custom mutator, you can specify the path to the respective shared object file as follows.
 
 For AFL++ (American Fuzzy Lop Plus Plus) using the example code:
 ```
