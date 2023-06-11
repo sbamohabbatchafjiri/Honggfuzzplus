@@ -129,7 +129,7 @@ To ensure everything is working properly, you can test each library by running t
 $HOME/fuzzing_libexif/install/bin/exif
 ```
 
-By executing these command lines, you can test and verify that each library is functioning correctly. For more targets please see [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1].
+By executing these command lines, you can test and verify that each library is functioning correctly.
 ### Enabling Custom Mutators:
 
 **Creating .so file**
@@ -280,7 +280,7 @@ and then, start up secondary (-S) instances like this:
 $ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer02 [...other stuff...]
 $ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer03 [...other stuff...]
 
-For more details about paralel fuzzing please see [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) [4].
+For more details about paralel fuzzing please see [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) [3].
 
 
 
@@ -294,10 +294,7 @@ For more details about paralel fuzzing please see [Paralel Fuzzing](https://gith
 [1] Antonio Morales. Fuzzing101. [Online]. Available: [Fuzzing101 GitHub Repository](https://github.com/antonio-morales/Fuzzing101/tree/main). Accessed: [09/06/2023].
 
 [2] Andrea Fioraldi, Dominik Maier, Heiko Eißfeldt, and Marc Heuse. “AFL++: Combining incremental steps of fuzzing research”. In 14th USENIX Workshop on Offensive Technologies (WOOT 20). USENIX Association, AFL++ [Online]. Available: [AFL++](https://github.com/AFLplusplus/AFLplusplus). Aug. 2020. Accessed: [09/06/2023].
-
-[3] [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) - Antonio Morales, "Fuzzing101" repository, Accessed [09/06/2023].
-
-[4] [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) - Stribika, "Tips for parallel fuzzing" repository, Accessed [09/06/2023].
+[3] [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) - Stribika, "Tips for parallel fuzzing" repository, Accessed [09/06/2023].
 
 
 ## Contact
