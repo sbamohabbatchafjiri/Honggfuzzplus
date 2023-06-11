@@ -118,7 +118,7 @@ make
 make install
 ```
 
-To see more details about building each target, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website.
+To see more details about building each target, and how to create the directory of target examples, please visit the [Fuzzing101](https://github.com/antonio-morales/Fuzzing101/tree/main) website.
 
 **Test the build**
 
@@ -182,12 +182,12 @@ For AFL++ (American Fuzzy Lop Plus Plus) using a custom mutator library:
 export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/example.so"
 ```
 
-For Honggfuzz:
+For AFL++ using the HonggFuzz custom mutator library:
 ```
 export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so"
 ```
 
-For libfuzzer:
+For AFL++ the LibFuzzer custom mutator library:
 ```
 export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/custom_mutators/libfuzzer/libfuzzer-mutator.so"
 ```
@@ -198,15 +198,15 @@ After setting the appropriate environment variables, you can execute the fuzzing
 
 For xpdf:
 ```
-afl-fuzz -i $HOME/fuzzing_xpdf/pdf_examples/ -o $HOME/fuzzing_xpdf/out/ -s 123 -- $HOME/fuzzing_xpdf/install/bin/pdftotext @@ $HOME/fuzzing_xpdf/output
+afl-fuzz -i $HOME/fuzzing_target/target_examples/ -o $HOME/fuzzing_xpdf/out/ -s 123 -- $HOME/fuzzing_target/install/bin/target @@ $HOME/fuzzing_target/output
 ```
 
-For libtiff:
-```
-afl-fuzz -m none -i $HOME/fuzzing_tiff/tiff-4.0.4/test/images/ -o $HOME/fuzzing_tiff/out/ -s 123 -- $HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w @@
-```
 
-The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets (xpdf and libtiff).
+
+
+
+
+The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets.
 
 ## Refrences
 
