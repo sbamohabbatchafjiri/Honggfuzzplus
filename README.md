@@ -151,6 +151,8 @@ This should display something similar to the following output.
 
 You can do similar process for libfuzzer as depicted in the following output:
 
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/9c962f03-6e0a-4931-9002-a0b07bf9a52f)
+
 
 To create a shared object file (.so) from the provided source code and files, compile the code using a suitable compiler, such as GCC, and link it with the required libraries, following the instructions specified in the provided Makefile. This process will produce a dynamic library (.so) that encapsulates the functionality defined in the source code, allowing it to be dynamically linked and used by other programs.
 
