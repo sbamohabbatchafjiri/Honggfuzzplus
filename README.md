@@ -92,8 +92,18 @@ This should display something similar to the following output.
 
 For  more details about AFL++ installation and docker file installation please visit: [AFL++](https://github.com/AFLplusplus/AFLplusplus)
 ### GNUplot
-installing GNUplot to generate some pretty graphs for any active fuzzing task using afl-plot. 
+Installing GNUplot to generate some pretty graphs for any active fuzzing task using afl-plot. 
+
+Create the output directory:
 <div>
+  <pre>
+    <code class="language-bash">
+mkdir /home/kali/graph_output_dir
+    </code>
+  </pre>
+</div>
+<div>
+Install gnuplot:
   <pre>
     <code class="language-bash">
 sudo apt-get install gnuplot
