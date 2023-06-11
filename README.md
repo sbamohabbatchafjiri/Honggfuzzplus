@@ -200,13 +200,26 @@ For xpdf:
 ```
 afl-fuzz -i $HOME/fuzzing_target/target_examples/ -o $HOME/fuzzing_xpdf/out/ -s 123 -- $HOME/fuzzing_target/install/bin/target @@ $HOME/fuzzing_target/output
 ```
+Here are different senarios:
+
+When you are using ALF++ without custom mutator and without -D, it will be like this:
+
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/518535bb-177b-43cd-859b-2d65ac955d87)
+
+When you are using ALF++ without custom mutator and with -D, it will be like this:
+
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/cbe9adc3-0cf0-450f-917b-a572c466c774)
+
+
+When you are using ALF++ with custom mutator and without -D, it will be like this:
+
+![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/4ec4fad1-b81e-4183-ac8a-99141cdeef2f)
+while
 
 
 
 
 
-
-The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets.
 
 ## Refrences
 
