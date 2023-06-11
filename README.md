@@ -203,7 +203,10 @@ Please note that the paths specified above are examples and should be adjusted a
 
 The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets. After setting the appropriate environment variables, you can execute the fuzzing process using the respective tools.
 
-For xpdf:
+```
+afl-fuzz -i input_dir -o output_dir -- ./target_program @@
+```
+In our example, the command line can be something like below when -s 123 sets a fixed seed.
 ```
 afl-fuzz -i $HOME/fuzzing_target/target_examples/ -o $HOME/fuzzing_xpdf/out/ -s 123 -- $HOME/fuzzing_target/install/bin/target @@ $HOME/fuzzing_target/output
 ```
@@ -258,15 +261,28 @@ export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/honggfuzz
 ```
 6. Navigate to the directory of your target program.
 
-7. Run AFL using the appropriate command-line options and the path to the target program. For example:
+By previous steps, you replaced the existing "mangle.c" and ".so" files with the patched custom mutator file and created a new shared object. Then, you employed the custom mutator by setting the "AFL_CUSTOM_MUTATOR_ONLY" environment variable before running AFL with your target program.
 
-```shell
-afl-fuzz -i input_dir -o output_dir -M master -- ./target_program @@
+7. Now, run AFL using the appropriate command-line options and the path to the target program. For example:
+
+```
+afl-fuzz -i input_dir -o output_dir -- ./target_program @@
 ```
 
-Replace "input_dir" with the directory containing the input files, "output_dir" with the desired output directory, "master" with the chosen instance name, and "target_program" with the name or path to your target program.
+Replace "input_dir" with the directory containing the input files, "output_dir" with the desired output directory and and "target_program" with the name or path to your target program. 
 
-By following these steps, you will replace the existing "mangle.c" and ".so" files with the patched custom mutator file and create a new shared object. Then, you can employ the custom mutator by setting the "AFL_CUSTOM_MUTATOR_ONLY" environment variable before running AFL with your target program.
+Also you can utulize parallel fuzzing by enabling -M and -S. Just run the first one ("master", -M) like this:
+
+$ ./afl-fuzz -i testcase_dir -o sync_dir -M fuzzer01 [...other stuff...]
+
+and then, start up secondary (-S) instances like this:
+
+$ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer02 [...other stuff...]
+$ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer03 [...other stuff...]
+
+For more details about paralel fuzzing please see [Paralel Fuzzing]([https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt)
+
+
 
 
 
