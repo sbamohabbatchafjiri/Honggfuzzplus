@@ -219,6 +219,10 @@ When you are using ALF++ with custom mutator and without -D, it will be like thi
 
 ![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/c4987d00-a196-417f-8024-a9051693d152)
 
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/c4987d00-a196-417f-8024-a9051693d152" alt="Image 1" width="300">
+</p>
+
 
 while
 
