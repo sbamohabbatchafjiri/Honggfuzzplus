@@ -183,8 +183,9 @@ export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/libfuzzer
 
 If you want to combine AFL mutation with custom mutation, you may use the following configuration.
 
-For AFL++ (American Fuzzy Lop Plus Plus) using a custom mutator library:
+For AFL++ (American Fuzzy Lop Plus Plus) using a example custom mutator library called example.c:
 ```
+gcc -shared -o example.so example.c
 export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/example.so"
 ```
 
@@ -242,25 +243,22 @@ To employ a patched custom mutator in AFL++, follow these steps:
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/9b365b40-599e-44a0-ba0d-a1ce16c81a2f" alt="Image 7" width="700">
 </p>
 
-3. Compile the new custom mutator file to create a new shared object (.so) file. Use an appropriate compiler, such as GCC, and ensure the necessary dependencies are met. The exact compilation command will depend on the specific code and any required libraries. For example, you can use the following command:
+3. Rename the new file to mangle.c
 
-```shell
-gcc -shared -o honggfuzz-mutator.so mangle(SPHongg).c
-```
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/910dae73-a524-401d-b84b-63e453aacfea" alt="Image 7" width="700">
+</p>
 
-Replace "mangle(SPHongg).c" with the actual file name.
+4. Compile the new custom mutator file to create a new shared object (.so) file by make as explained in the previous section. Use an appropriate compiler, such as GCC, and ensure the necessary dependencies are met. The exact compilation command will depend on the specific code and any required libraries.
 
-4. After successfully creating the new ".so" file, set the environment variable "AFL_CUSTOM_MUTATOR_ONLY" to the path of the custom mutator shared object. Use the following command:
+5. After successfully creating the new ".so" file, set the environment variable "AFL_CUSTOM_MUTATOR_ONLY" to the path of the custom mutator shared object. Use the following command:
 
 ```shell
 export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so"
 ```
+6. Navigate to the directory of your target program.
 
-Replace "/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so" with the actual path to the newly created shared object file.
-
-5. Navigate to the directory of your target program.
-
-6. Run AFL using the appropriate command-line options and the path to the target program. For example:
+7. Run AFL using the appropriate command-line options and the path to the target program. For example:
 
 ```shell
 afl-fuzz -i input_dir -o output_dir -M master -- ./target_program @@
