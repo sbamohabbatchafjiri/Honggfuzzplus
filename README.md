@@ -176,11 +176,62 @@ $HOME/fuzzing_libexif/install/bin/exif
   </pre>
 </div>
 
-By executing these command lines, you can test and verify that each library is functioning correctly. 
+By executing these command lines, you can test and verify that each library is functioning correctly. For more targets please see [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1].
+### Enabling Custom Mutators:
 
+**Creating .so file**
 
-For more targets please see [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1].
+The ".so" stands for "shared object." Shared libraries contain reusable code and data that can be dynamically linked by programs at runtime. They provide a way to share code among multiple executable files, reducing duplication and improving efficiency.
 
+If you want to exclusively use a custom mutator, you can specify the path to the respective shared object file as follows:
+
+For AFL++ (American Fuzzy Lop Plus Plus) using the example code:
+```
+export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/example.so"
+```
+
+For Honggfuzz:
+```
+export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so"
+```
+
+For libfuzzer:
+```
+export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/libfuzzer/libfuzzer-mutator.so"
+```
+
+If you want to combine AFL mutation with custom mutation, you can use the following configuration:
+
+For AFL++ (American Fuzzy Lop Plus Plus) using a custom mutator library:
+```
+export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/example.so"
+```
+
+For Honggfuzz:
+```
+export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so"
+```
+
+For libfuzzer:
+```
+export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/custom_mutators/libfuzzer/libfuzzer-mutator.so"
+```
+
+Please note that the paths specified above are examples and should be adjusted according to the actual location of the shared object files on your system.
+
+After setting the appropriate environment variables, you can execute the fuzzing process using the respective tools:
+
+For xpdf:
+```
+afl-fuzz -i $HOME/fuzzing_xpdf/pdf_examples/ -o $HOME/fuzzing_xpdf/out/ -s 123 -- $HOME/fuzzing_xpdf/install/bin/pdftotext @@ $HOME/fuzzing_xpdf/output
+```
+
+For libtiff:
+```
+afl-fuzz -m none -i $HOME/fuzzing_tiff/tiff-4.0.4/test/images/ -o $HOME/fuzzing_tiff/out/ -s 123 -- $HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w @@
+```
+
+The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets (xpdf and libtiff).
 
 ## Refrences
 
