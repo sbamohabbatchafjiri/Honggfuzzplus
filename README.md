@@ -180,69 +180,7 @@ $HOME/fuzzing_libexif/install/bin/exif
 By executing these command lines, you can test and verify that each library is functioning correctly. 
 
 
-Here is an example from [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1]:
-
-<div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME
-      mkdir fuzzing_xpdf && cd fuzzing_xpdf/
-    </code>
-  </pre>
-</div>
-
-<div>
-  <pre>
-    <code class="language-bash">
-      sudo apt install build-essential
-    </code>
-  </pre>
-</div>
-
-<div>
-  <pre>
-    <code class="language-bash">
-      wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
-      tar -xvzf xpdf-3.02.tar.gz
-    </code>
-  </pre>
-</div>
-
-<div>
-  <pre>
-    <code class="language-bash">
-      cd xpdf-3.02
-      sudo apt update && sudo apt install -y build-essential gcc
-      ./configure --prefix="$HOME/fuzzing_xpdf/install/"
-      make
-      make install
-    </code>
-  </pre>
-</div>
-
-<div>
-  <pre>
-    <code class="language-bash">
-      cd $HOME/fuzzing_xpdf
-      mkdir pdf_examples && cd pdf_examples
-      wget https://github.com/mozilla/pdf.js-sample-files/raw/master/helloworld.pdf
-      wget http://www.africau.edu/images/default/sample.pdf
-      wget https://www.melbpc.org.au/wp-content/uploads/2017/10/small-example-pdf-file.pdf
-    </code>
-  </pre>
-</div>
-
-<div>
-  <pre>
-    <code class="language-bash">
-      $HOME/fuzzing_xpdf/install/bin/pdfinfo -box -meta $HOME/fuzzing_xpdf/pdf_examples/helloworld.pdf
-    </code>
-  </pre>
-</div>
-
-You will see: 
-
-![image](https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/e897a032-c185-4a16-a988-90e5c3afc029)
+For more targets please see [Exercise 1](https://github.com/antonio-morales/Fuzzing101/tree/main/Exercise%201) created by Antonio Morales in the "Fuzzing101" repository [1].
 
 
 ## Refrences
