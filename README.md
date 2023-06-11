@@ -194,7 +194,7 @@ export AFL_CUSTOM_MUTATOR_LIBRARY="/home/kali/AFLplusplus/custom_mutators/libfuz
 
 Please note that the paths specified above are examples and should be adjusted according to the actual location of the shared object files on your system.
 
-The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets. After setting the appropriate environment variables, you can execute the fuzzing process using the respective tools:
+The provided commands assume that you have already set up the necessary directories and installed the required tools and dependencies for the respective fuzzing targets. After setting the appropriate environment variables, you can execute the fuzzing process using the respective tools.
 
 For xpdf:
 ```
