@@ -285,19 +285,31 @@ For more details about parallel fuzzing please see [Paralel Fuzzing](https://git
 
 ### Analyzing results:
 
-1- Capturing screenshots from the AFL++ screen and manually inserting data into an Excel file to plot results every 24 hours.
+1- Capturing screenshots from the AFL++ screen and manually inserting data into an Excel file to plot results every 24 hours. Here are two captured screenshots:
+
+Verification stage: 3 parallel run on VMware® Workstation 16 player with 2 GB RAM and two different Operating Systems (5.19.0-kali2-amd64 (2 runs), 6.0.0-kali3-amd64 (1 run). 
+Host OS: 64-bit Windows 10 Education (16 GB RAM, Intel 11th generation i5-1145G7 CPU)
+
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/a98987a6-147b-43f7-afe6-4ebe34c4f2d2)" alt="Image 5" width="700">
+</p>
+
+Validation stage:  10 paralel runs on 10 identical VM snapshots with 2 GB RAM (version 16.3.4)
+Host OS: Windows 64GB RAM, 11 Pro with 10 CPU cores (i9-9820X CPU) of 3.30GHz  
+VM OS: kali 6.0.0-kali3-amd64
 
 <p align="center">
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/ba7e4ac1-f246-4835-91ac-3110438ed78e)" alt="Image 5" width="700">
 </p>
 
 
-2- fetching data from afl-whatsup and calculating the time when the gap between run-time and last seen hang is longer than 24 hours. It is shown by last_hang 
+2- fetching data from afl-whatsup and calculating the time when the gap between run-time and last seen hang is longer than 24 hours. It is shown by last_hang in below image:
 
 <p align="center">
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/3053b1d9-5f1f-4418-bef3-d53b53a2dca0" alt="Image 5" width="700">
 </p>
 
+3- analysing afl-gnu graphs by below command lines:
 
 
 ## Refrences
