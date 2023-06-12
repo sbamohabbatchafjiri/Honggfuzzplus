@@ -303,7 +303,7 @@ VM OS: kali 6.0.0-kali3-amd64
 </p>
 
 
-2- By fetching data from afl-whatsup and calculating the time, you may evaluate if the time interval between run-time and last seen hang is longer than 24 hours. To do this, you may navigate to the directory where your target's fuzzing campaign is located. This directory should contain the AFL output directory (out/). Run the afl-whatsup command followed by the path to the AFL output directory. For example:
+2- By fetching data from afl-whatsup and calculating the time, you may evaluate if the time interval between run-time and last seen hang is longer than 24 hours. To do this, you may navigate to the directory where your target's fuzzing campaign is located. This directory should contain the AFL output directory (out/). Run the afl-whatsup command followed by the path to the AFL output directory as follows:
 ```
 afl-whatsup out/
 ```
