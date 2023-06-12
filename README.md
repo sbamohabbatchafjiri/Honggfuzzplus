@@ -303,7 +303,14 @@ VM OS: kali 6.0.0-kali3-amd64
 </p>
 
 
-2- fetching data from afl-whatsup and calculating the time when the gap between run-time and last seen hang is longer than 24 hours. It is shown by last_hang in below image:
+2- By fetching data from afl-whatsup and calculating the time, you may evaluate if the time interval between run-time and last seen hang is longer than 24 hours. To do this, you may navigate to the directory where your target's fuzzing campaign is located. This directory should contain the AFL output directory (out/). Run the afl-whatsup command followed by the path to the AFL output directory. For example:
+```
+afl-whatsup out/
+```
+
+This command will execute afl-whatsup on the out/ directory, providing the status summary of the AFL instances in that directory.
+
+last_hang (time interval between run-time and last seen hang) is shown as below:
 
 <p align="center">
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/3053b1d9-5f1f-4418-bef3-d53b53a2dca0" alt="Image 5" width="700">
