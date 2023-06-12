@@ -281,12 +281,22 @@ and then, start up secondary (-S) instances like this:
 $ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer02 [...other stuff...]
 $ ./afl-fuzz -i testcase_dir -o sync_dir -S fuzzer03 [...other stuff...]
 
-For more details about paralel fuzzing please see [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) [3].
+For more details about parallel fuzzing please see [Paralel Fuzzing](https://github.com/stribika/afl-fuzz/blob/master/docs/parallel_fuzzing.txt) [3].
+
+### Analyzing results:
+
+1- Capturing screenshots from the AFL++ screen and manually inserting data into an Excel file to plot results every 24 hours.
+
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/ba7e4ac1-f246-4835-91ac-3110438ed78e)" alt="Image 5" width="700">
+</p>
 
 
+2- fetching data from afl-whatsup and calculating the time when the gap between run-time and last seen hang is longer than 24 hours. It is shown by last_hang 
 
-
-
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/3053b1d9-5f1f-4418-bef3-d53b53a2dca0" alt="Image 5" width="700">
+</p>
 
 
 
