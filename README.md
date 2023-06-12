@@ -257,7 +257,7 @@ To employ a patched custom mutator in AFL++, follow these steps:
 
 5. After successfully creating the new ".so" file, set the environment variable "AFL_CUSTOM_MUTATOR_ONLY" to the path of the custom mutator shared object. Use the following command:
 
-```shell
+```
 export AFL_CUSTOM_MUTATOR_ONLY="/home/kali/AFLplusplus/custom_mutators/honggfuzz/honggfuzz-mutator.so"
 ```
 6. Navigate to the directory of your target program.
@@ -309,12 +309,8 @@ VM OS: kali 6.0.0-kali3-amd64
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/3053b1d9-5f1f-4418-bef3-d53b53a2dca0" alt="Image 5" width="700">
 </p>
 
-\begin{algorithm}[th]
-\floatname{algorithm}{Code Block}
-%\newgeometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
-\begin{minted}[frame=lines, linenos, breaklines, fontsize=\tiny]{c++}
+```
 import time
-
 # dictionary to store the last seen crash/hang time for each machine
 last_seen = {
     "machine1": time.time(),
@@ -356,12 +352,7 @@ print("Alarm timestamps:", [time.ctime(ts) for ts in alarm_timestamps])
 
 
 }
-\end{minted}
-\caption{Determining Testing Time}
-\label{alg:testingtime}
-\end{algorithm}
-
-\end{document}
+```
 
 3- analysing afl-gnu graphs by below command lines:
 The commands generate graphical plots using `afl-plot` for different fuzzing campaigns. Here's a short explanation of how to run each command:
