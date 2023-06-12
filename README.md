@@ -353,6 +353,7 @@ print("Alarm timestamps:", [time.ctime(ts) for ts in alarm_timestamps])
 
 }
 ```
+The term "Last seen" refers to the time at which the last significant event (either a crash or a hang) occurred during the fuzzing process. The "Last seen" value can be based on either the last_crash or last_hang metric, depending on the chosen strategy for determining testing time and analyzing graphs.
 
 3- analysing afl-gnu graphs by below command lines:
 The commands generate graphical plots using `afl-plot` for different fuzzing campaigns. Here's a short explanation of how to run each command:
@@ -377,15 +378,20 @@ III. Plot for tcpdump:
 
 Make sure to replace `/home/kali/graph_output_dir` with the actual directory path where you want to save the generated plots.
 
-Here are examples for verification and validation stages.
+Here are examples of verification and validation stages.
 
 **Verification stage:**
 
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/b1edc626-33c3-4129-b504-9a73346e190e)" alt="Image 5" width="700">
+</p>
 
 
 **Validation stage:**
 
-
+<p align="center">
+  <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/1651816a-eba1-4a83-8d8b-3a852046d09d)" alt="Image 5" width="700">
+</p>
 
 ## Refrences
 
