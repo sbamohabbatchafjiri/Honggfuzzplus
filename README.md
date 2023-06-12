@@ -360,7 +360,52 @@ print("Alarm timestamps:", [time.ctime(ts) for ts in alarm_timestamps])
 
 }
 ```
-The term "Last seen" refers to the time at which the last significant event (either a crash or a hang) occurred during the fuzzing process. The "Last seen" value can be based on either the last_crash or last_hang metric, depending on the chosen strategy for determining testing time and analyzing graphs.
+The term "Last seen" refers to the time at which the last significant event (either a crash or a hang) occurred during the fuzzing process. The "Last seen" value can be based on either the last_crash or last_hang occurance time, depending on the chosen strategy for determining testing time and analyzing graphs. In afl-whatsup the time gap between run time and last seen crash or hang is saved in last_crash or last_hang. No need to calulate it again. It is as follows: 
+
+```
+import time
+# dictionary to store the last seen crash/hang time for each machine
+last_hang = {
+    "machine1": time.time(),
+    "machine2": time.time(),
+    "machine3": time.time(),
+    "machine4": time.time(),
+    "machine5": time.time(),
+    "machine6": time.time(),
+    "machine7": time.time(),
+    "machine8": time.time(),
+    "machine9": time.time(),
+    "machine10": time.time(),
+}
+
+# list to store the timestamps of when each alarm was triggered
+alarm_timestamps = []
+
+while True:
+    time.sleep(3599*3599)  # wait for 23 hours and 59 minutes and 59 seconds
+    
+    # calculate the time gap between the last seen crash/hang and current time for each machine
+    time_gaps = [last_hang[machine] for machine in last_hang]
+    
+    # count the number of machines that have exceeded the 24-hour threshold
+    machines_exceeded_threshold = sum(1 for gap in time_gaps if gap >= 24*60*60)
+    
+    # check if 5 or more machines have exceeded the threshold and trigger the first alarm
+    if machines_exceeded_threshold >= 5 and len(alarm_timestamps) == 0:
+        alarm_timestamps.append(time.time())
+        print("First alarm triggered at", time.ctime())
+    
+    # check if 8 or more machines have exceeded the threshold and trigger the second alarm
+    elif machines_exceeded_threshold >= 8 and len(alarm_timestamps) == 1:
+        alarm_timestamps.append(time.time())
+        print("Second alarm triggered at", time.ctime())
+        break  # exit the loop
+    
+print("Alarm timestamps:", [time.ctime(ts) for ts in alarm_timestamps])
+
+
+}
+```
 
 3- analysing afl-gnu graphs by below command lines:
 The commands generate graphical plots using `afl-plot` for different fuzzing campaigns. Here's a short explanation of how to run each command:
