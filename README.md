@@ -287,14 +287,14 @@ For more details about parallel fuzzing please see [Paralel Fuzzing](https://git
 
 1- Capturing screenshots from the AFL++ screen and manually inserting data into an Excel file to plot results every 24 hours. Here are two captured screenshots:
 
-Verification stage: 3 parallel run on VMware® Workstation 16 player with 2 GB RAM and two different Operating Systems (5.19.0-kali2-amd64 (2 runs), 6.0.0-kali3-amd64 (1 run). 
+I. Verification stage: 3 parallel run on VMware® Workstation 16 player with 2 GB RAM and two different Operating Systems (5.19.0-kali2-amd64 (2 runs), 6.0.0-kali3-amd64 (1 run). 
 Host OS: 64-bit Windows 10 Education (16 GB RAM, Intel 11th generation i5-1145G7 CPU)
 
 <p align="center">
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/a98987a6-147b-43f7-afe6-4ebe34c4f2d2)" alt="Image 5" width="700">
 </p>
 
-Validation stage:  10 paralel runs on 10 identical VM snapshots with 2 GB RAM (version 16.3.4)
+II. Validation stage:  10 paralel runs on 10 identical VM snapshots with 2 GB RAM (version 16.3.4)
 Host OS: Windows 64GB RAM, 11 Pro with 10 CPU cores (i9-9820X CPU) of 3.30GHz  
 VM OS: kali 6.0.0-kali3-amd64
 
@@ -309,7 +309,91 @@ VM OS: kali 6.0.0-kali3-amd64
   <img src="https://github.com/sbamohabbatchafjiri/Honggfuzzplus/assets/47651730/3053b1d9-5f1f-4418-bef3-d53b53a2dca0" alt="Image 5" width="700">
 </p>
 
+\begin{algorithm}[th]
+\floatname{algorithm}{Code Block}
+%\newgeometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
+\begin{minted}[frame=lines, linenos, breaklines, fontsize=\tiny]{c++}
+import time
+
+# dictionary to store the last seen crash/hang time for each machine
+last_seen = {
+    "machine1": time.time(),
+    "machine2": time.time(),
+    "machine3": time.time(),
+    "machine4": time.time(),
+    "machine5": time.time(),
+    "machine6": time.time(),
+    "machine7": time.time(),
+    "machine8": time.time(),
+    "machine9": time.time(),
+    "machine10": time.time(),
+}
+
+# list to store the timestamps of when each alarm was triggered
+alarm_timestamps = []
+
+while True:
+    time.sleep(3599*3599)  # wait for 23 hours and 59 minutes and 59 seconds
+    
+    # calculate the time gap between the last seen crash/hang and current time for each machine
+    time_gaps = [time.time() - last_seen[machine] for machine in last_seen]
+    
+    # count the number of machines that have exceeded the 24-hour threshold
+    machines_exceeded_threshold = sum(1 for gap in time_gaps if gap >= 24*60*60)
+    
+    # check if 5 or more machines have exceeded the threshold and trigger the first alarm
+    if machines_exceeded_threshold >= 5 and len(alarm_timestamps) == 0:
+        alarm_timestamps.append(time.time())
+        print("First alarm triggered at", time.ctime())
+    
+    # check if 8 or more machines have exceeded the threshold and trigger the second alarm
+    elif machines_exceeded_threshold >= 8 and len(alarm_timestamps) == 1:
+        alarm_timestamps.append(time.time())
+        print("Second alarm triggered at", time.ctime())
+        break  # exit the loop
+    
+print("Alarm timestamps:", [time.ctime(ts) for ts in alarm_timestamps])
+
+
+}
+\end{minted}
+\caption{Determining Testing Time}
+\label{alg:testingtime}
+\end{algorithm}
+
+\end{document}
+
 3- analysing afl-gnu graphs by below command lines:
+The commands generate graphical plots using `afl-plot` for different fuzzing campaigns. Here's a short explanation of how to run each command:
+
+I. Plot for XPDF:
+   ```
+   /usr/local/bin/afl-plot --graphical /home/kali/fuzzing_xpdf/out/default/ /home/kali/graph_output_dir
+   ```
+   This command generates a graphical plot for the fuzzing campaign conducted on XPDF. It assumes that the fuzzing output directory is located at `/home/kali/fuzzing_xpdf/out/default/`. The generated plot will be saved in the directory specified by `/home/kali/graph_output_dir`.
+
+II. Plot for Libtiff:
+   ```
+   /usr/local/bin/afl-plot --graphical /home/kali/fuzzing_tiff/out/default /home/kali/graph_output_dir
+   ```
+   This command generates a graphical plot for the fuzzing campaign conducted on Libtiff. It assumes that the fuzzing output directory is located at `/home/kali/fuzzing_tiff/out/default`. The resulting plot will be saved in the directory specified by `/home/kali/graph_output_dir`.
+
+III. Plot for tcpdump:
+   ```
+   /usr/local/bin/afl-plot --graphical /home/kali/fuzzing_tcpdump/out/default /home/kali/graph_output_dir
+   ```
+   This command generates a graphical plot for the fuzzing campaign conducted on tcpdump. It assumes that the fuzzing output directory is located at `/home/kali/fuzzing_tcpdump/out/default`. The generated plot will be saved in the directory specified by `/home/kali/graph_output_dir`.
+
+Make sure to replace `/home/kali/graph_output_dir` with the actual directory path where you want to save the generated plots.
+
+Here are examples for verification and validation stages.
+
+**Verification stage:**
+
+
+
+**Validation stage:**
+
 
 
 ## Refrences
